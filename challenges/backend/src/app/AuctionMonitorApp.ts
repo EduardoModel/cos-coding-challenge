@@ -21,15 +21,15 @@ export class AuctionMonitorApp {
         const runningAuctions = await this.carOnSaleClient.getRunningAuctions();
 
         // Verify if the information wasn't retrieved
-        if(!runningAuctions.runningAuctionsCount){
+        if(!runningAuctions.getRunningAuctionsCount){
             // Exit process with status -1
             process.exit(-1);
         }
 
         // Log the retrieved data
-        this.logger.log(`Number of auctions: ${runningAuctions.runningAuctionsCount}`);
-        this.logger.log(`Average bid count on auctions: ${runningAuctions.averageAuctionBidCount}`);
-        this.logger.log(`Average percentage of the auction progress: ${runningAuctions.averageAuctionProgressPercentage}`);
+        this.logger.log(`Number of auctions: ${runningAuctions.getRunningAuctionsCount()}`);
+        this.logger.log(`Average bid count on auctions: ${runningAuctions.getAverageAuctionBidCount()}`);
+        this.logger.log(`Average percentage of the auction progress: ${runningAuctions.getAverageAuctionProgressPercentage()}`);
 
         // Exit process with status 0
         process.exit(0);
