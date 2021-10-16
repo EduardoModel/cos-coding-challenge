@@ -21,5 +21,5 @@ export class Logger implements ILogger {
         this.log(`Exiting with the status ${status}`);
         process.exit(status);
     }
-
+    
 }
