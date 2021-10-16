@@ -20,7 +20,7 @@ export class CarOnSaleApi implements ICarOnSaleApi {
         this.authenticated = false;
     }
 
-    public async authenticate(): Promise<void> {
+    public async authenticate(): Promise<any> {
         if(!this.authenticated){
             try{
                 // Retrieve an access token
@@ -42,9 +42,7 @@ export class CarOnSaleApi implements ICarOnSaleApi {
     
                 this.authenticated = true;
             }
-            catch(e: AxiosError | any){
-                console.error(e.data);
-            }
+            catch(e: AxiosError | any){}
         }
     }
 
@@ -54,24 +52,23 @@ export class CarOnSaleApi implements ICarOnSaleApi {
 
     public async get(url: string): Promise<Response> {
         const response : Response = await api.get(url);
-        // console.log(response);
         return response;
     }
 
-    public async post(request: Request): Promise<Response> {
-        return new Promise((resolve) => resolve(1));
+    public async post(request: Request): Promise<any> {
+        return new Promise((resolve) => resolve(request)); // TODO: Implement this method correctly
     }
 
-    public async put(request: Request): Promise<Response> {
-        return new Promise((resolve) => resolve(1));
+    public async put(request: Request): Promise<any> {
+        return new Promise((resolve) => resolve(request)); // TODO: Implement this method correctly
     }
 
-    public async delete(request: Request): Promise<Response> {
-        return new Promise((resolve) => resolve(1));
+    public async delete(request: Request): Promise<any> {
+        return new Promise((resolve) => resolve(request)); // TODO: Implement this method correctly
     }
 
-    public async patch(request: Request): Promise<Response> {
-        return new Promise((resolve) => resolve(1));
+    public async patch(request: Request): Promise<any> {
+        return new Promise((resolve) => resolve(request)); // TODO: Implement this method correctly
     }
 
 }

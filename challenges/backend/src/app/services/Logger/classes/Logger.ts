@@ -13,4 +13,13 @@ export class Logger implements ILogger {
         console.log(`[LOG]: ${message}`);
     }
 
+    public logSpacer(): void {
+        console.log('\n--------------------------------------\n');
+    }
+
+    public exit(status: number): void {
+        this.log(`Exiting with the status ${status}`);
+        process.exit(status);
+    }
+
 }
