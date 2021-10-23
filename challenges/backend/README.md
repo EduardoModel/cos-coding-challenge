@@ -19,9 +19,9 @@ Please fulfill the following tasks (according to the description above):
 4. Implement the actual service to retrieve the list of running auctions (by using the CarOnSale RESTful API, see Swagger documentation) ✔️
 5. Come up with an interface definition that you can use to access the response objects of a CarOnSale API call (see TODO tag in `ICarOnSaleClient` and check the Swagger documentation for the response objects). ✔️
 6. Register your service to the dependency injection container in ``main.ts`` ✔️
-7. Integrate your service into the application: If the application runs, the service should be used to retrieve running auctions from the CarOnSale API, display the number of auctions, average number of bids on an auction as well as the average percentage of the auction progress (ratio of current highest bid value and minimum required ask) and the exit with exit code 0. If the service is failing, the process should be quit with exit code -1. 
-8. Commit and push everything to your branch 
-9. Inform <coding-challenge@caronsale.de> that you finished the challenge :) 
+7. Integrate your service into the application: If the application runs, the service should be used to retrieve running auctions from the CarOnSale API, display the number of auctions, average number of bids on an auction as well as the average percentage of the auction progress (ratio of current highest bid value and minimum required ask) and the exit with exit code 0. If the service is failing, the process should be quit with exit code -1. ✔️
+8. Commit and push everything to your branch ✔️
+9. Inform <coding-challenge@caronsale.de> that you finished the challenge :) ✔️
 
 Additional Hints:
 
